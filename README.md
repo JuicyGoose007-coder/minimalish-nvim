@@ -1,4 +1,4 @@
-# Minimal-Nvim
+# Minimalish-Nvim
 
 A Neovim config built on `vim.pack`. No plugin manager, no bootstrap script.
 
