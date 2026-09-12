@@ -27,7 +27,7 @@ mv ~/.local/state/nvim ~/.local/state/nvim.bak
 Then:
 
 ```sh
-git clone https://github.com/JuicyGoose007-coder/minimal-nvim ~/.config/nvim
+git clone https://github.com/JuicyGoose007-coder/minimalish-nvim ~/.config/nvim
 nvim
 ```
 
@@ -35,28 +35,28 @@ First launch clones the plugins and builds treesitter parsers. Restart after.
 
 ## Plugins
 
-| Plugin                 |                                              |
-| ---------------------- | -------------------------------------------- |
-| gruvbox-material       | colorscheme                                  |
-| nvim-treesitter        | syntax highlighting and code parsing         |
-| mini.icons             | file and language icons                      |
-| mini.pairs             | auto-close brackets and quotes               |
-| mini.visits            | harpoon-style file pinning and frecency      |
-| fzf-lua                | fuzzy finder (files, grep, symbols, etc.)    |
-| oil.nvim               | file explorer — edit directories as buffers   |
-| undotree               | visual undo history                          |
-| gitsigns.nvim          | git hunk signs, stage, blame, diff           |
-| conform.nvim           | format-on-save (stylua, shfmt, prettier, etc.) |
-| blink.cmp              | completion engine                            |
-| which-key.nvim         | keymap popup on leader press                 |
-| lazydev.nvim           | lua_ls support for neovim plugin APIs        |
-| snacks.nvim            | dashboard, notifier, word refs, indent guides |
-| trouble.nvim           | diagnostics, quickfix, symbols panel         |
-| flash.nvim             | jump and treesitter-select motions           |
-| vim-tmux-navigator     | `<C-h/j/k/l>` pane switching with tmux      |
-| tiny-cmdline.nvim      | floating command line                        |
-| treesj                 | split / join code blocks                     |
-| nvim-hlslens           | match count overlay on search                |
+| Plugin             |                                                |
+| ------------------ | ---------------------------------------------- |
+| gruvbox-material   | colorscheme                                    |
+| nvim-treesitter    | syntax highlighting and code parsing           |
+| mini.icons         | file and language icons                        |
+| mini.pairs         | auto-close brackets and quotes                 |
+| mini.visits        | harpoon-style file pinning and frecency        |
+| fzf-lua            | fuzzy finder (files, grep, symbols, etc.)      |
+| oil.nvim           | file explorer — edit directories as buffers    |
+| undotree           | visual undo history                            |
+| gitsigns.nvim      | git hunk signs, stage, blame, diff             |
+| conform.nvim       | format-on-save (stylua, shfmt, prettier, etc.) |
+| blink.cmp          | completion engine                              |
+| which-key.nvim     | keymap popup on leader press                   |
+| lazydev.nvim       | lua_ls support for neovim plugin APIs          |
+| snacks.nvim        | dashboard, notifier, word refs, indent guides  |
+| trouble.nvim       | diagnostics, quickfix, symbols panel           |
+| flash.nvim         | jump and treesitter-select motions             |
+| vim-tmux-navigator | `<C-h/j/k/l>` pane switching with tmux         |
+| tiny-cmdline.nvim  | floating command line                          |
+| treesj             | split / join code blocks                       |
+| nvim-hlslens       | match count overlay on search                  |
 
 ## Keymaps
 
