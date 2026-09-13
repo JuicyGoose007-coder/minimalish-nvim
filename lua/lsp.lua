@@ -7,7 +7,7 @@ vim.lsp.enable({
 })
 
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = false,
 	severity_sort = true,
 	signs = {
 		text = {

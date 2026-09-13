@@ -49,6 +49,7 @@ vim.pack.add({
 	-- hands over when the pane's foreground command is nvim.
 	gh("christoomey/vim-tmux-navigator"),
 	gh("rachartier/tiny-cmdline.nvim"),
+	gh("rachartier/tiny-inline-diagnostic.nvim"),
 	gh("wansmer/treesj"),
 	gh("abecodes/tabout.nvim"),
 	gh("kevinhwang91/nvim-hlslens"),
@@ -73,6 +74,7 @@ require("plugins.lazydev")
 require("plugins.trouble")
 require("plugins.flash")
 require("plugins.snacks")
+require("plugins.tiny-inline-diagnostic")
 require("lsp")
 require("statusline")
 require("autocmds")
