@@ -50,6 +50,7 @@ vim.pack.add({
 	gh("christoomey/vim-tmux-navigator"),
 	gh("rachartier/tiny-cmdline.nvim"),
 	gh("wansmer/treesj"),
+	gh("abecodes/tabout.nvim"),
 	gh("kevinhwang91/nvim-hlslens"),
 })
 
@@ -66,6 +67,7 @@ require("plugins.conform")
 require("plugins.blink")
 require("plugins.hlslens")
 require("plugins.treesj")
+require("plugins.tabout")
 require("plugins.whichkey")
 require("plugins.lazydev")
 require("plugins.trouble")

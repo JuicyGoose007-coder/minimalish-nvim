@@ -4,31 +4,12 @@ require("blink.cmp").setup({
 	-- never conflicts.
 	keymap = {
 		preset = "default",
-		-- Tab picks from the menu, the way fzf-tab does.
-		-- Nothing showing yet? Open it first.
-		["<Tab>"] = {
-			"select_and_accept",
-			"show",
-			"snippet_forward",
-			"fallback",
-		},
-		["<S-Tab>"] = { "snippet_backward", "fallback" },
 
 		-- Takes the inline ghost text, like ^E in .zshrc.
 		-- Works with the menu closed: select_and_accept is
 		-- gated on is_visible(), which counts ghost text.
 		["<C-e>"] = { "select_and_accept", "fallback" },
 		["<C-g>"] = { "cancel", "fallback" },
-
-		-- Herdr eats these two; move their jobs elsewhere.
-		["<C-k>"] = false,
-		["<C-b>"] = false,
-		["<C-s>"] = {
-			"show_signature",
-			"hide_signature",
-			"fallback",
-		},
-		["<C-u>"] = { "scroll_documentation_up", "fallback" },
 	},
 
 	appearance = { nerd_font_variant = "mono" },
