@@ -45,9 +45,9 @@ vim.pack.add({
 	gh("folke/snacks.nvim"),
 	gh("folke/trouble.nvim"),
 	gh("folke/flash.nvim"),
+	gh("christoomey/vim-tmux-navigator"),
 	-- Default mappings are <C-h/j/k/l>, which is what ~/.config/tmux/tmux.conf
 	-- hands over when the pane's foreground command is nvim.
-	gh("christoomey/vim-tmux-navigator"),
 	gh("rachartier/tiny-cmdline.nvim"),
 	gh("rachartier/tiny-inline-diagnostic.nvim"),
 	gh("wansmer/treesj"),
