@@ -1,6 +1,6 @@
 -- Write and quit
-vim.keymap.set("n", "<leader>w", ":w<cr>", { silent = true, desc = "Write" })
-vim.keymap.set("n", "<leader>q", ":q<cr>", { silent = true, desc = "Quit" })
+-- vim.keymap.set("n", "<leader>w", ":w<cr>", { silent = true, desc = "Write" })
+-- vim.keymap.set("n", "<leader>q", ":q<cr>", { silent = true, desc = "Quit" })
 
 -- Redo
 vim.keymap.set("n", "U", "<c-r>", { silent = true, desc = "Redo" })
