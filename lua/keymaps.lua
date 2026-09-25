@@ -77,7 +77,7 @@ vim.keymap.set("n", "<Esc>", function()
 	vim.api.nvim_buf_clear_namespace(0, vim.api.nvim_create_namespace("nvim.multicursor"), 0, -1)
 end, { silent = true, desc = "Clear search highlight and multicursors" })
 
--- Alt is free: Herdr moved its own alt chords off, niri never took any.
+-- Move lines.
 vim.keymap.set("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { silent = true, desc = "Move line down" })
 vim.keymap.set("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { silent = true, desc = "Move line up" })
 vim.keymap.set(
