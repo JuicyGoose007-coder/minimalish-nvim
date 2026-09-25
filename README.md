@@ -43,7 +43,7 @@ First launch clones the plugins and builds treesitter parsers. Restart after.
 | mini.pairs                  | auto-close brackets and quotes                 |
 | mini.visits                 | harpoon-style file pinning and frecency        |
 | fzf-lua                     | fuzzy finder (files, grep, symbols, etc.)      |
-| oil.nvim                    | file explorer — edit directories as buffers    |
+| mini.files                  | file explorer — edit directories as buffers    |
 | undotree                    | visual undo history                            |
 | gitsigns.nvim               | git hunk signs, stage, blame, diff             |
 | conform.nvim                | format-on-save (stylua, shfmt, prettier, etc.) |
@@ -73,7 +73,7 @@ Leader is `<Space>`. `<leader>?` lists the current buffer's keys.
 | `<leader>z`                                | jump to project                                             |
 | `<leader>sb` `sr` `sh` `sk` `ss` `sd` `sl` | buffers, recent, help, keymaps, symbols, diagnostics, lines |
 | `<leader>sF` `sG`                          | files / grep from home                                      |
-| `-` / `<leader>e`                          | oil, parent dir / float                                     |
+| `<leader>e`                                | file explorer                                               |
 | `s` / `S`                                  | flash jump / treesitter select                              |
 | `<leader>1-4`                              | jump to pinned slot                                         |
 | `<leader>v1-4`                             | pin file to slot                                            |
