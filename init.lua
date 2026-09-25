@@ -1,9 +1,15 @@
+-- Leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Core Nvim configuration
 require("options")
 require("ui")
+require("statusline")
+require("autocmds")
+require("keymaps")
 
+-- Install
 vim.api.nvim_create_autocmd("PackChanged", {
 	callback = function(ev)
 		local name, kind = ev.data.spec.name, ev.data.kind
@@ -55,6 +61,7 @@ vim.pack.add({
 	gh("kevinhwang91/nvim-hlslens"),
 })
 
+-- Plugins
 require("colorscheme")
 require("plugins.icons")
 require("plugins.pairs")
@@ -75,7 +82,6 @@ require("plugins.trouble")
 require("plugins.flash")
 require("plugins.snacks")
 require("plugins.tiny-inline-diagnostic")
+
+-- Lsp
 require("lsp")
-require("statusline")
-require("autocmds")
-require("keymaps")
