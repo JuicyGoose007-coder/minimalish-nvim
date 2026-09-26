@@ -46,8 +46,7 @@ if vim.fn.executable("zoxide") == 1 then
 			end
 
 			-- A no-name buffer falls back to cwd inside root(), which
-			-- would record wherever nvim was launched. Oil buffers are
-			-- named oil:///... so they still pass.
+			-- would record wherever nvim was launched.
 			if vim.api.nvim_buf_get_name(args.buf) == "" then
 				return
 			end
