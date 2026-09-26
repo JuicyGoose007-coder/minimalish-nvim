@@ -8,6 +8,23 @@ vim.api.nvim_create_autocmd({ "TextYankPost", "TextPutPost" }, {
 	end,
 })
 
+-- Per-language indent where the default 2 spaces isn't the convention.
+-- Go, Python, Rust and Markdown are already set by Nvim's own ftplugins.
+-- LSP formatters and shfmt read these, so they also decide what's saved.
+vim.api.nvim_create_autocmd("FileType", {
+	group = vim.api.nvim_create_augroup("indent", { clear = true }),
+	pattern = { "java", "cs", "lua" },
+	callback = function(args)
+		local bo = vim.bo[args.buf]
+		if args.match == "lua" then
+			-- stylua writes tabs; type them too so nothing shifts on save.
+			bo.expandtab = false
+		else
+			bo.shiftwidth, bo.tabstop, bo.softtabstop = 4, 4, 4
+		end
+	end,
+})
+
 -- Restore cursor to file position in previous editing session
 vim.api.nvim_create_autocmd("BufReadPost", {
 	callback = function(args)
