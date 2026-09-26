@@ -54,10 +54,6 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
-    "oil.nvim": {
-      "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
-      "src": "https://github.com/stevearc/oil.nvim"
-    },
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim"
@@ -83,8 +79,8 @@
       "src": "https://github.com/folke/trouble.nvim"
     },
     "undotree": {
-      "rev": "02b69aed427b848c4dca483fc5e9524b6019c296",
-      "src": "https://github.com/jiaoshijee/undotree"
+      "rev": "5721c3fb3876f3e772251a23d1ab0948899a0216",
+      "src": "https://github.com/jiaoshijie/undotree"
     },
     "vim-tmux-navigator": {
       "rev": "e41c431a0c7b7388ae7ba341f01a0d217eb3a432",
