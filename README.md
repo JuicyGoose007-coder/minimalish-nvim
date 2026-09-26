@@ -14,6 +14,43 @@ paru -S --needed git fzf ripgrep tree-sitter-cli zoxide wl-clipboard \
 
 A Nerd Font is needed for icons. `zoxide` and `wl-clipboard` are optional.
 
+Language servers for the rest of the enabled languages. Skip any you don't
+use; a missing server just never attaches.
+
+```sh
+paru -S --needed gopls clang rust-analyzer jdk-openjdk jdtls csharp-ls \
+  vscode-json-languageserver vscode-html-languageserver \
+  vscode-css-languageserver yaml-language-server marksman taplo-cli
+```
+
+## Language servers
+
+Native `vim.lsp`, no nvim-lspconfig or Mason. Each server has a config in
+`lsp/<name>.lua` and is turned on in `lua/lsp.lua`. Servers come from the
+system package manager.
+
+| Language              | Server                        |
+| --------------------- | ----------------------------- |
+| Lua                   | lua_ls                        |
+| Bash                  | bashls                        |
+| Python                | pyright + ruff                |
+| JS / TS               | ts_ls                         |
+| Go                    | gopls                         |
+| C / C++               | clangd                        |
+| Rust                  | rust_analyzer                 |
+| Java                  | jdtls                         |
+| C#                    | csharp_ls                     |
+| JSON / YAML / TOML    | jsonls, yamlls, taplo         |
+| HTML / CSS / Markdown | html, cssls, marksman         |
+
+clangd needs a `compile_commands.json` (CMake:
+`-DCMAKE_EXPORT_COMPILE_COMMANDS=ON`) or `compile_flags.txt` in the project.
+jdtls keeps a per-project index under `~/.cache/nvim/jdtls/`.
+
+To add a language: install the server, add `lsp/<name>.lua` with `cmd`,
+`filetypes` and `root_markers`, then add `<name>` to `vim.lsp.enable` in
+`lua/lsp.lua`. Check it with `:checkhealth vim.lsp`.
+
 ## Install
 
 Back up an existing config first:
