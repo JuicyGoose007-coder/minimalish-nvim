@@ -4,6 +4,17 @@ vim.lsp.enable({
 	"pyright",
 	"ruff",
 	"ts_ls",
+	"gopls",
+	"clangd",
+	"rust_analyzer",
+	"jdtls",
+	"csharp_ls",
+	"jsonls",
+	"yamlls",
+	"html",
+	"cssls",
+	"marksman",
+	"taplo",
 })
 
 vim.diagnostic.config({
