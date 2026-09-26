@@ -29,19 +29,19 @@ Native `vim.lsp`, no nvim-lspconfig or Mason. Each server has a config in
 `lsp/<name>.lua` and is turned on in `lua/lsp.lua`. Servers come from the
 system package manager.
 
-| Language              | Server                        |
-| --------------------- | ----------------------------- |
-| Lua                   | lua_ls                        |
-| Bash                  | bashls                        |
-| Python                | pyright + ruff                |
-| JS / TS               | ts_ls                         |
-| Go                    | gopls                         |
-| C / C++               | clangd                        |
-| Rust                  | rust_analyzer                 |
-| Java                  | jdtls                         |
-| C#                    | csharp_ls                     |
-| JSON / YAML / TOML    | jsonls, yamlls, taplo         |
-| HTML / CSS / Markdown | html, cssls, marksman         |
+| Language              | Server                |
+| --------------------- | --------------------- |
+| Lua                   | lua_ls                |
+| Bash                  | bashls                |
+| Python                | pyright + ruff        |
+| JS / TS               | ts_ls                 |
+| Go                    | gopls                 |
+| C / C++               | clangd                |
+| Rust                  | rust_analyzer         |
+| Java                  | jdtls                 |
+| C#                    | csharp_ls             |
+| JSON / YAML / TOML    | jsonls, yamlls, taplo |
+| HTML / CSS / Markdown | html, cssls, marksman |
 
 clangd needs a `compile_commands.json` (CMake:
 `-DCMAKE_EXPORT_COMPILE_COMMANDS=ON`) or `compile_flags.txt` in the project.
@@ -111,6 +111,7 @@ Leader is `<Space>`. `<leader>?` lists the current buffer's keys.
 | `<leader>sb` `sr` `sh` `sk` `ss` `sd` `sl` | buffers, recent, help, keymaps, symbols, diagnostics, lines |
 | `<leader>sF` `sG`                          | files / grep from home                                      |
 | `<leader>e`                                | file explorer                                               |
+| `gx`                                       | open URL, or file under cursor                              |
 | `s` / `S`                                  | flash jump / treesitter select                              |
 | `<leader>1-4`                              | jump to pinned slot                                         |
 | `<leader>v1-4`                             | pin file to slot                                            |
@@ -128,6 +129,11 @@ Leader is `<Space>`. `<leader>?` lists the current buffer's keys.
 | `<S-h>` `<S-l>`                            | prev / next buffer                                          |
 | `<leader>rw`                               | replace word under cursor                                   |
 | `<leader>D`                                | delete to void                                              |
+| `p` (visual)                               | paste without yanking the selection                         |
+| `Q` / `1Q` / `Q` (visual)                  | multicursor here / at every search match / on each line     |
+| `q=`                                       | toggle multicursor follow-mode                              |
+| `]C` `[C`                                  | next / prev multicursor                                     |
+| `<Esc>`                                    | clear search highlight and multicursors                     |
 | `<leader>u` `R`                            | update plugins, restart                                     |
 | `<leader>n` `N`                            | notification history, dismiss                               |
 
@@ -135,4 +141,11 @@ Completion is blink.cmp on the `default` preset: `<C-n>`/`<C-p>` move, `<C-y>`
 accepts, `<C-e>` takes the ghost text, `<C-g>` cancels. `<Tab>`/`<S-Tab>` are
 left to tabout.nvim for jumping out of brackets and quotes.
 
-`<C-h/j/k/l>` are used by vim-tmux-navigator for pane switching.
+`<C-h/j/k/l>` are used by vim-tmux-navigator for pane switching, which takes
+`<C-l>` from Nvim's multicursor clear; `<Esc>` does it instead.
+
+In the file explorer, `l` opens a file and closes the explorer; `L` opens it
+and keeps the explorer up.
+
+Some builtins are tweaked: `n` `N` `<C-d>` `<C-u>` recenter, `J` keeps the
+cursor in place, and a bare `j`/`k` moves by wrapped line.
