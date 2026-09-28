@@ -61,6 +61,7 @@ vim.pack.add({
 	gh("kevinhwang91/nvim-hlslens"),
 	{ src = "https://codeberg.org/comfysage/jamjar.nvim" },
 })
+
 -- Plugins
 require("colorscheme")
 require("plugins.icons")
