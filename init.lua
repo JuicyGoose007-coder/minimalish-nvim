@@ -59,8 +59,8 @@ vim.pack.add({
 	gh("wansmer/treesj"),
 	gh("abecodes/tabout.nvim"),
 	gh("kevinhwang91/nvim-hlslens"),
+	{ src = "https://codeberg.org/comfysage/jamjar.nvim" },
 })
-
 -- Plugins
 require("colorscheme")
 require("plugins.icons")
@@ -82,6 +82,7 @@ require("plugins.trouble")
 require("plugins.flash")
 require("plugins.snacks")
 require("plugins.tiny-inline-diagnostic")
+require("plugins.jamjar")
 
 -- Lsp
 require("lsp")
