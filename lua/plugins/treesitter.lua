@@ -4,6 +4,7 @@ require("nvim-treesitter").install({
 	"vimdoc",
 	"query",
 	"bash",
+	"zsh",
 	"python",
 	"go",
 	"gomod",
