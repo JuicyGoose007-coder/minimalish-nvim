@@ -6,5 +6,7 @@ require("mini.files").setup({
 })
 
 vim.keymap.set("n", "<leader>e", function()
-	MiniFiles.open()
-end, { desc = "File explorer" })
+	local buf_name = vim.api.nvim_buf_get_name(0)
+	local path = vim.uv.fs_stat(buf_name) and buf_name or nil
+	require("mini.files").open(path)
+end, { desc = "Open mini.files at current file" })
