@@ -79,6 +79,12 @@ require("snacks").setup({
 	},
 })
 
+lazygit = { enabled = true }
+
+vim.keymap.set("n", "<leader>gg", function()
+	Snacks.lazygit()
+end, { desc = "Lazygit" })
+
 vim.keymap.set("n", "<leader>n", function()
 	Snacks.notifier.show_history()
 end, { silent = true, desc = "Notification history" })
