@@ -4,6 +4,7 @@ require("snacks").setup({
 	bigfile = { enabled = true },
 	notifier = { enabled = true },
 	words = { enabled = true },
+	lazygit = { enabled = true },
 
 	-- signcolumn=yes gives one slot, so a diagnostic sign hides the git sign on
 	-- the same line. This splits the gutter and puts git signs right of the number.
@@ -79,9 +80,7 @@ require("snacks").setup({
 	},
 })
 
-lazygit = { enabled = true }
-
-vim.keymap.set("n", "<leader>gg", function()
+vim.keymap.set("n", "<leader>G", function()
 	Snacks.lazygit()
 end, { desc = "Lazygit" })
 

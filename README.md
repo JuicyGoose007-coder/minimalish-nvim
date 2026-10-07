@@ -119,6 +119,7 @@ Leader is `<Space>`. `<leader>?` lists the current buffer's keys.
 | `<leader>vv` `vV`                          | visited files (project / everywhere)                        |
 | `]c` `[c`                                  | next / prev hunk                                            |
 | `<leader>hs` `hr` `hp` `hb` `hd`           | stage, reset, preview, blame, diff hunk                     |
+| `<leader>G`                                | lazygit                                                     |
 | `gd`                                       | go to definition                                            |
 | `]]` `[[`                                  | next / prev reference                                       |
 | `<leader>xx` `xX` `xq` `xl`                | diagnostics project, buffer, quickfix, loclist              |
