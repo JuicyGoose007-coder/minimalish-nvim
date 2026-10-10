@@ -97,6 +97,14 @@ vim.keymap.set(
 vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { silent = true, desc = "Prev buffer" })
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { silent = true, desc = "Next buffer" })
 
+-- Close buffers
+vim.keymap.set("n", "<leader>bd", function()
+	Snacks.bufdelete()
+end, { desc = "Delete buffer" })
+vim.keymap.set("n", "<leader>bo", function()
+	Snacks.bufdelete.other()
+end, { desc = "Delete other buffer" })
+
 -- c_CTRL-R_CTRL-W pulls in the word under the cursor, so no feedkeys
 -- dance. Lands on the cmdline with the cursor between the slashes.
 vim.keymap.set("n", "<leader>rw", ":%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>", {

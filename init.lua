@@ -59,6 +59,7 @@ vim.pack.add({
 	gh("wansmer/treesj"),
 	gh("abecodes/tabout.nvim"),
 	gh("kevinhwang91/nvim-hlslens"),
+	gh("akinsho/bufferline.nvim"),
 	{ src = "https://codeberg.org/comfysage/jamjar.nvim" },
 })
 
@@ -84,6 +85,7 @@ require("plugins.flash")
 require("plugins.snacks")
 require("plugins.tiny-inline-diagnostic")
 require("plugins.jamjar")
+require("plugins.bufferline")
 
 -- Lsp
 require("lsp")

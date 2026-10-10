@@ -35,6 +35,21 @@ require("snacks").setup({
 			keys = {
 				{
 					icon = " ",
+					key = "n",
+					desc = "New File",
+					action = function()
+						vim.ui.input({ prompt = "New File: ", completion = "file" }, function(path)
+							if not path or path == "" then
+								return
+							end
+							path = vim.fs.normalize(path)
+							vim.fn.mkdir(vim.fs.dirname(path), "p")
+							vim.cmd.edit(vim.fn.fnameescape(path))
+						end)
+					end,
+				},
+				{
+					icon = " ",
 					key = "f",
 					desc = "Find File",
 					action = ":lua Snacks.dashboard.pick('files')",
